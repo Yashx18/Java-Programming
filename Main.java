@@ -142,32 +142,107 @@ public class Main {
 
         // COMPOUND INTEREST CALCULATOR 
 
-        double principal;
-        double rate;
-        int timesCompounded;
-        int years;
-        double amount;
+        // double principal;
+        // double rate;
+        // int timesCompounded;
+        // int years;
+        // double amount;
 
-        System.out.print("Enter the Principal amount : ");
-        principal = userInput.nextDouble();
+        // System.out.print("Enter the Principal amount : ");
+        // principal = userInput.nextDouble();
+        // userInput.nextLine();
+
+        // System.out.print("Enter the Rate of Interest(in %) : ");
+        // rate = userInput.nextDouble() /100;
+        // userInput.nextLine();
+
+        // System.out.print("Enter the time of amount has to be compounded : ");
+        // timesCompounded = userInput.nextInt();
+        // userInput.nextLine();
+
+        // System.out.print("Enter the years for amount is invested : ");
+        // years = userInput.nextInt();
+        // userInput.nextLine();
+
+        // amount = principal * Math.pow(1 + rate / timesCompounded, timesCompounded * years);
+
+        // System.out.printf("The Amount after %d years is $%,.2f.\n",years, amount);
+
+        // VALUES EXTRACTOR FROM EMAIL
+
+        // String email;
+        // System.out.print("Enter your Email : ");
+        // email = userInput.nextLine();
+
+        // if (email.contains("@")) {
+        //     int point = email.lastIndexOf("@");
+        //     String username = email.substring(0, point);
+        //     String domain = email.substring(point + 1);
+
+        //     System.out.printf("Your email is %s\n", email);
+        //     System.out.printf("Your username is %s\n", username);
+        //     System.out.printf("Your domain name is %s\n", domain);
+            
+        // } else {
+        //     System.out.println("Emails must contain '@'.");
+        // }
+
+        // WEIGHT CONVERSION PROGRAM
+
+        // double weight;
+        // double newWeight;
+        // int choice;
+
+        // System.out.println("Weight Conversion Program");
+        // System.out.println("Opt 1. Convert Lbs to Kgs");
+        // System.out.println("Opt 2. Convert Kgs to Lbs");
+
+        // System.out.print("Enter your choice (1/2) : ");
+        // choice = userInput.nextInt();
+
+
+        // if (choice == 1 || choice == 2) {
+        //     System.out.print("Enter the Weight : ");
+        //     weight = userInput.nextDouble();
+        //     userInput.nextLine();
+
+        //     if (choice == 1) {
+        //         newWeight = weight * 0.45359237;
+        //         System.out.printf("%.2f lbs is equals to %.2f kgs.\n", weight, newWeight);
+        //     } else {
+        //         newWeight = weight * 2.20462;
+        //         System.out.printf("%.2f kgs is equals to %.2f lbs.\n", weight, newWeight);
+        //     }
+        // } else {
+        //     System.out.println("Choose from the Options (1/2).");
+        //     System.out.println("Opt 1. Convert Lbs to Kgs");
+        //     System.out.println("Opt 2. Convert Kgs to Lbs");
+        // }
+
+        // TERNARY OPERATOR '? '
+
+        // int num = 2;
+        // String evenOrOdd = (num % 2 == 0) ? "EVEN" : "ODD";
+        // System.out.println(evenOrOdd);
+
+        // TEMPERATURE CONVERTER
+
+        double temperature;
+        double result;
+        String choice;
+         
+        System.out.print("Enter the temperature : ");
+        temperature = userInput.nextDouble();
         userInput.nextLine();
 
-        System.out.print("Enter the Rate of Interest(in %) : ");
-        rate = userInput.nextDouble() /100;
-        userInput.nextLine();
+        System.out.print("Convert to Celsius or Fahrenheit? (C or F) : ");
+        choice = userInput.next().toUpperCase();
 
-        System.out.print("Enter the time of amount has to be compounded : ");
-        timesCompounded = userInput.nextInt();
-        userInput.nextLine();
+        result = (choice.equals("C")) ? (temperature - 32) * 5 / 9 : (temperature * 9/5)  +32;
 
-        System.out.print("Enter the years for amount is invested : ");
-        years = userInput.nextInt();
-        userInput.nextLine();
+        System.out.printf("%.2f °%s\n", result, choice );
 
-        amount = principal * Math.pow(1 + rate / timesCompounded, timesCompounded * years);
-
-        System.out.printf("The Amount after %d years is $%,.2f.\n",years, amount);
 
         userInput.close();
-    }
+    } 
 }
