@@ -1,9 +1,11 @@
 // import java.util.ArrayList;
-// import java.util.Arrays;
+import java.util.Arrays;
+import java.util.Random;
 // import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
+    static Scanner userInput = new Scanner(System.in);
 
     public static void main(String[] args) {
         // String name = "bro code";
@@ -38,8 +40,6 @@ public class Main {
 
         // }
         //  userInput.close();
-
-        Scanner userInput = new Scanner(System.in);
 
         // double width = 0 ;
         // double height = 0 ;
@@ -383,6 +383,129 @@ public class Main {
         //     System.out.println();
         // }
 
-        userInput.close();
+        // JAVA BANKING PROGRAM
+
+        // double balance;
+        // int choice = 0;
+        // boolean isRunning = true;
+
+        // System.out.print("Enter the Funds you have ($) : ");
+        // balance = userInput.nextDouble();
+
+        // while (isRunning) {
+        //     System.out.println("********************");
+        //     System.out.println("BANKING PROGRAM");
+        //     System.out.println("********************");
+        //     System.out.println("1. Show balance");
+        //     System.out.println("2. Deposit");
+        //     System.out.println("3. Withdraw");
+        //     System.out.println("4. Exit");
+        //     System.out.println("********************");
+        //     System.out.print("Enter your Option (1-4) : ");
+        //     choice = userInput.nextInt();
+
+        //     switch (choice) {
+        //         case 1 -> showBalance(balance);
+        //         case 2 -> {
+        //             balance += deposit();
+        //             System.out.println("------------------------------");
+        //             System.out.printf("Updated Balance is $%,.2f\n", balance);
+        //             System.out.println("------------------------------");
+        //         }
+        //         case 3 -> {
+        //             double response = withDraw();
+        //             if(response > balance){
+        //                 System.out.println("Insufficient Funds");
+        //             } else {
+        //                 balance -= response;
+        //                 System.out.println("------------------------------");
+        //                 System.out.printf("Updated Balance is $%,.2f\n", balance);
+        //                 System.out.println("------------------------------");
+        //             }
+        //         }
+        //         case 4 -> {
+        //             System.out.println("Alright, Bye !!");
+        //             isRunning = exit();
+        //         }
+        //         default -> {
+        //             System.out.println("Invalid Input ! Choose from the given options (1-4) !");
+        //         }
+        //     }
+        // }
+
+        // ADDING USERINPUT TO ARRAY
+
+        // String[] arr;
+        // int size;
+        // System.out.print("How many items you want to enter? : ");
+        // size = userInput.nextInt();
+        // userInput.nextLine();
+        // arr = new String[size];
+        // String item = "";
+
+        // for (int i = 0; i < arr.length; i++) {
+        //     System.out.print("Enter the Input : ");
+        //     item = userInput.nextLine();
+        //     arr[i] = item;
+        // }
+
+        // // for (String input : arr) {
+        // //     System.out.println(input);
+        // // }
+        // System.out.println(Arrays.toString(arr));
+
+        // ROLL THE DICE
+        Random random = new Random();
+        int numOfDice;
+        int roll;
+        int total = 0;
+        System.out.print("Enter the number of Dice : ");
+        numOfDice = userInput.nextInt();
+
+        for (int i = 0; i < numOfDice; i++) {
+            roll = random.nextInt(1, 7);
+            total += roll;
+            System.out.printf("Rolled the dice and got %d.\n", roll);
+        }
+        System.out.printf("Your total is %d.\n",total);
+
     }
-}
+
+    static void showBalance(double balance) {
+        System.out.println("------------------------------");
+        System.out.printf("Your Balance is $%,.2f\n", balance);    
+        System.out.println("------------------------------");
+    }
+
+    static double deposit() {
+        System.out.print("Enter the amount to Deposit : ");
+        double amount = userInput.nextDouble();
+        if (amount < 0) {
+            System.out.println("------------------------------");
+            System.out.print("Amount can't be Negative.");
+            System.out.println("------------------------------");
+
+            return 0;
+        } else{
+            return amount;    
+        }
+        }
+        
+        static double withDraw() {
+            System.out.print("Enter the amount to withdraw : ");
+            double amount = userInput.nextDouble();
+            if (amount < 0) {
+            System.out.println("------------------------------");
+            System.out.print("Amount can't be Negative.");
+            System.out.println("------------------------------");
+
+            return 0;
+        } else{
+            return amount;    
+        }
+        }
+        
+        static boolean exit() {
+                return false;
+        }
+    }
