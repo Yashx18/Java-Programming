@@ -1,2 +1,1 @@
-
-        double amount = userInput.nextDouble();
+}

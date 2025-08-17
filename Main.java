@@ -455,21 +455,299 @@ public class Main {
         // System.out.println(Arrays.toString(arr));
 
         // ROLL THE DICE
-        Random random = new Random();
-        int numOfDice;
-        int roll;
-        int total = 0;
-        System.out.print("Enter the number of Dice : ");
-        numOfDice = userInput.nextInt();
 
-        for (int i = 0; i < numOfDice; i++) {
-            roll = random.nextInt(1, 7);
-            total += roll;
-            System.out.printf("Rolled the dice and got %d.\n", roll);
-        }
-        System.out.printf("Your total is %d.\n",total);
+        // Random random = new Random();
+        // int numOfDice;
+        // int roll = 0;
+        // int total = 0;
+        // System.out.print("Enter the number of Dice : ");
+        // numOfDice = userInput.nextInt();
+
+        // for (int i = 0; i < numOfDice; i++) {
+        //     roll = random.nextInt(1, 7);
+        //     total += roll;
+        //     System.out.printf("Rolled the dice and got %d.\n", roll);
+
+        //     switch (roll) {
+        //         case 1 -> System.out.println("""
+        //          ---------
+        //         |         |
+        //         |    ●    |
+        //         |         |
+        //          ---------
+        //         """);
+        //     case 2 -> System.out.println("""
+        //          ---------
+        //          | ●       |
+        //          |         |
+        //          |       ● |
+        //          ---------
+        //         """);
+        //     case 3 -> System.out.println("""
+        //          ---------
+        //          |  ●      |
+        //          |    ●    |
+        //          |      ●  |
+        //          ---------
+        //          """);
+        //     case 4 -> System.out.println("""
+        //          ---------
+        //         | ●     ● |
+        //         |         |
+        //         | ●     ● |
+        //          ---------
+        //         """);
+        //     case 5 -> System.out.println("""
+        //          ---------
+        //         | ●     ● |
+        //         |    ●    |
+        //         | ●     ● |
+        //          ---------
+        //         """);
+        //     case 6 -> System.out.println("""
+        //          ---------- 
+        //         |  ●    ●  |
+        //         |  ●    ●  |
+        //         |  ●    ●  |
+        //          ----------
+        //          """);
+
+        //         }
+        //     }
+        // System.out.printf("Your total is %d.\n",total);
+
+        // VARARGS
+
+        // System.out.println("Your Total is "+add(1, 2, 3, 4));
+        // System.out.println("Your Avg. is " + avg(1,2,3,4));
+
+        // 2D ARRAYS
+
+        // char[][] telephone = {
+        //     {'1', '2', '3'},
+        //     {'4', '5', '6'},
+        //     {'7', '8', '9'},
+        //     {'*', '0', '#'},
+        // };
+        // for (char[] row : telephone) {
+        //     for (char element : row) {
+        //         System.out.printf("%c ", element);
+        //     }
+        //     System.out.println();
+        // }
+
+        // JAVA QUIZ GAME
+
+        // int marks = 0;
+
+        // String[] questions = {
+        //     "What is the main function of a router ?",
+        //     "Which part is considered the brain of a computer ?",
+        //     "What year was Facebook was launched ?",
+        //     "Who is knows as the father of Computer ?",
+        //     "What was the first programming language ?",
+        // };
+
+        // String[][] options = {
+        //     {
+        //         "1. Storing Files",
+        //         "2. Encrypting Data",
+        //         "3. Directing Internet Traffic",
+        //         "4. Managing Passwords",
+        //     },
+        //     {
+        //         "1. CPU",
+        //         "2. Hard Drive",
+        //         "3. RAM",
+        //         "4. GPU",
+        //     },
+        //     {
+        //         "1. 2000",
+        //         "2. 2004",
+        //         "3. 2006",
+        //         "4. 2008",
+        //     },
+        //     {
+        //         "1. Steve Jobs",
+        //         "2. Bill Gates",
+        //         "3. Alan Turing",
+        //         "4. Charles Babbage",
+        //     },
+        //     {
+        //         "1. COBOL",
+        //         "2. C",
+        //         "3. FORTRAN",
+        //         "4. Assembly",
+        //     },
+        // };
+
+        // int[] answers = {
+        //     3,
+        //     1,
+        //     2,
+        //     4,
+        //     3,
+        // };
+        // System.out.println();
+        // System.out.println("****************************");
+        // System.out.println("WELCOME TO THE JAVA QUIZ GAME !!");
+        // System.out.println("****************************");
+        // System.out.println();
+
+        // for (int i = 0; i < questions.length; i++) {
+        //     System.out.println(questions[i]);
+        //     for (String opt : options[i]) {
+        //         System.out.println(opt);
+        //     }
+        //     System.out.println();
+        //     System.out.print("Enter your choice (1-4) : ");
+        //     int choice = userInput.nextInt();
+        //     userInput.nextLine();
+
+        //     if (choice == answers[i]) {
+        //         System.out.println("-------------");
+        //         System.out.println("CORRECT !");
+        //         System.out.println("-------------");
+        //         marks++;
+        //     } else {
+        //         System.out.println("-------------");
+        //         System.out.println("WRONG !");
+        //         System.out.println("-------------");
+        //     }
+
+        // }
+        // System.out.printf("Your scored %d out of %d in this Quiz !\n", marks, questions.length);
+
+
+        // ROCK , PAPER , SCISSORS GAME
+
+        // String[] choices = {
+        //     "rock",
+        //     "paper",
+        //     "scissors"
+        // };
+        // String keepPlaying = "yes";
+
+        // String user;
+         
+        // while (!keepPlaying.equals("no")) {
+        //     System.out.print("Enter your choice (rock , paper , scissors) : ");
+        // user = userInput.nextLine().toLowerCase();
+
+        // Random random = new Random();
+
+        // if (!user.equals("rock") && !user.equals("paper") && !user.equals("scissors")) {
+        //     System.out.println("Invalid Choice !!");
+        //     continue;
+        // }
+
+        // String computer = choices[random.nextInt(3)];
+        // System.out.println("Computer chose "+ computer);
+        
+        // if (user.equals(computer)) {
+        //     System.out.println("Tie");
+        // }else if((user.equals("rock") && computer.equals("scissors")) || (user.equals("paper") && computer.equals("rock")) || (user.equals("scissors") && computer.equals("paper"))){
+        //     System.out.println("User Won !");
+        // }else {
+        //     System.out.println("Computer Won !");
+        // }
+        // System.out.print("Want to keep playing ? (Yes/No) : ");
+        // keepPlaying = userInput.nextLine().toLowerCase();
+
+        // if (keepPlaying.equals("no")) {
+        //     System.out.println("Alright, Bye !!");
+        // }
+
+        // }
+
+        // SLOT MACHINE PROJECT
+
+        int balance = 100;
+        int bet;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
+    // -----METHODS-----
+
+    static double avg(double... numbers) {
+        double res = 0;
+        for (double d : numbers) {
+            res += d;
+        }
+        return res / numbers.length;
+    }
+    
+    static int add(int... number) {
+        int sum = 0;
+        for (int i : number) {
+            sum += i;
+        }
+        return sum;
+
+    }
+
+    // Methods used in the BANKING PROGRAM. 
 
     static void showBalance(double balance) {
         System.out.println("------------------------------");
@@ -506,6 +784,6 @@ public class Main {
         }
         
         static boolean exit() {
-                return false;
+            return false;
         }
     }
