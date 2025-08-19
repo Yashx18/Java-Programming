@@ -678,87 +678,87 @@ public class Main {
 
         // SLOT MACHINE PROJECT
 
-        int balance = 100;
-        int bet;
-        String choice;
-        boolean keepPlaying = true;
-        String[] slotOptions = { "🍉", "🍊", "🍇", "🥭", "🍎" };
-        Random random = new Random();
-        String[] res = new String[3];
+        // int balance = 100;
+        // int bet;
+        // String choice;
+        // boolean keepPlaying = true;
+        // String[] slotOptions = { "🍉", "🍊", "🍇", "🥭", "🍎" };
+        // Random random = new Random();
+        // String[] res = new String[3];
 
-        System.out.println("***************************************");
-        System.out.println("WELCOME TO THE JAVA SLOT MACHINE !!");
-        System.out.println("***************************************");
+        // System.out.println("***************************************");
+        // System.out.println("WELCOME TO THE JAVA SLOT MACHINE !!");
+        // System.out.println("***************************************");
 
-        while (keepPlaying) {
+        // while (keepPlaying) {
 
-            System.out.print("Enter your bet : ");
-            bet = userInput.nextInt();
+        //     System.out.print("Enter your bet : ");
+        //     bet = userInput.nextInt();
 
-            if (bet <= 0) {
-                System.out.println("Bet can't be less than 0.");
-            } else if (bet > balance) {
-                System.out.println("Insufficient funds !!");
-            } else {
-                System.out.printf("Placed bet of $%d.\n", bet);
-                balance -= bet;
-                System.out.println("Your Current Balances is $ " + balance);
+        //     if (bet <= 0) {
+        //         System.out.println("Bet can't be less than 0.");
+        //     } else if (bet > balance) {
+        //         System.out.println("Insufficient funds !!");
+        //     } else {
+        //         System.out.printf("Placed bet of $%d.\n", bet);
+        //         balance -= bet;
+        //         System.out.println("Your Current Balances is $ " + balance);
 
-                System.out.println("Spinning...");
-                for (int i = 0; i < 3; i++) {
-                    res[i] = slotOptions[random.nextInt(slotOptions.length)];
-                }
-                for (String item : res) {
-                    System.out.printf("%s ", item);
-                }
+        //         System.out.println("Spinning...");
+        //         for (int i = 0; i < 3; i++) {
+        //             res[i] = slotOptions[random.nextInt(slotOptions.length)];
+        //         }
+        //         for (String item : res) {
+        //             System.out.printf("%s ", item);
+        //         }
 
-                if (res[0].equals(res[1]) && res[1].equals(res[2]) ) {
-                    switch (res[0]) {
-                        case "🍉" -> {
-                            bet *= 3;
-                            System.out.printf("You WON !! Your bet became", bet);
-                            System.out.println("Your total Balance is now " + balance + bet);
-                        }
-                        case "🍊" -> {
-                            bet *= 4;
-                            System.out.printf("You WON !! Your bet became", bet);
-                            System.out.println("Your total Balance is now " + balance + bet);
-                        }
-                        case "🍇" -> {
-                            bet *= 5;
-                            System.out.printf("You WON !! Your bet became", bet);
-                            System.out.println("Your total Balance is now " + balance + bet);
-                        }
-                        case "🥭" -> {
-                            bet *= 6;
-                            System.out.printf("You WON !! Your bet became", bet);
-                            System.out.println("Your total Balance is now " + balance + bet);
-                        }
-                        case "🍎" -> {
-                            bet *= 8;
-                            System.out.printf("You WON !! Your bet became", bet);
-                            System.out.println("Your total Balance is now " + balance + bet);
-                        }
+        //         if (res[0].equals(res[1]) && res[1].equals(res[2]) ) {
+        //             switch (res[0]) {
+        //                 case "🍉" -> {
+        //                     bet *= 3;
+        //                     System.out.printf("You WON !! Your bet became", bet);
+        //                     System.out.println("Your total Balance is now " + balance + bet);
+        //                 }
+        //                 case "🍊" -> {
+        //                     bet *= 4;
+        //                     System.out.printf("You WON !! Your bet became", bet);
+        //                     System.out.println("Your total Balance is now " + balance + bet);
+        //                 }
+        //                 case "🍇" -> {
+        //                     bet *= 5;
+        //                     System.out.printf("You WON !! Your bet became", bet);
+        //                     System.out.println("Your total Balance is now " + balance + bet);
+        //                 }
+        //                 case "🥭" -> {
+        //                     bet *= 6;
+        //                     System.out.printf("You WON !! Your bet became", bet);
+        //                     System.out.println("Your total Balance is now " + balance + bet);
+        //                 }
+        //                 case "🍎" -> {
+        //                     bet *= 8;
+        //                     System.out.printf("You WON !! Your bet became", bet);
+        //                     System.out.println("Your total Balance is now " + balance + bet);
+        //                 }
 
-                        default -> {
-                            bet *= 0;
-                            System.out.printf("You LOST !! ", bet);
-                        }
-                    }
-                    System.out.println("Want to Keep playing (y/n) : ");
-                    choice = userInput.nextLine();
-                    if (choice.equals("n")) {
-                        keepPlaying = false;
-                        System.out.println("You cashed out, your total balance is $"+ balance);
-                    } else if (choice.equals("y")) {
-                        keepPlaying = true;
-                    } else {
-                        System.out.println("Enter a Valid Input");
-                    }
-                }
-                System.out.println();
-            }
-        }
+        //                 default -> {
+        //                     bet *= 0;
+        //                     System.out.printf("You LOST !! ", bet);
+        //                 }
+        //             }
+        //             System.out.println("Want to Keep playing (y/n) : ");
+        //             choice = userInput.nextLine();
+        //             if (choice.equals("n")) {
+        //                 keepPlaying = false;
+        //                 System.out.println("You cashed out, your total balance is $"+ balance);
+        //             } else if (choice.equals("y")) {
+        //                 keepPlaying = true;
+        //             } else {
+        //                 System.out.println("Enter a Valid Input");
+        //             }
+        //         }
+        //         System.out.println();
+        //     }
+        // }
 
         // OBJECTS
 
@@ -777,6 +777,7 @@ public class Main {
     }
     // -----METHODS-----
 
+    // this one here is a overloaded method that accepts no finited number of arguments.
     static double avg(double... numbers) {
         double res = 0;
         for (double d : numbers) {
