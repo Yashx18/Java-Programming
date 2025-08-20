@@ -1,9 +1,11 @@
 
 // import java.util.ArrayList;
+import java.io.FileWriter;
 import java.util.Arrays;
 import java.util.Random;
 // import java.util.Random;
 import java.util.Scanner;
+
 
 public class Main {
     static Scanner userInput = new Scanner(System.in);
@@ -773,6 +775,14 @@ public class Main {
         // student4.occupation();
         // System.out.println(Student.numOfStudents);
         // System.out.println(student1.schoolName);
+
+      try(FileWriter file = new FileWriter("test.txt");) {
+          file.write("IS THIS WORKING?");
+          System.out.println("located");
+      } catch (Exception e) {
+        System.out.println(e);
+        // TODO: handle exception
+      }
 
     }
     // -----METHODS-----
