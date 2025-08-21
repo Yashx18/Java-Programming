@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.Random;
 // import java.util.Random;
 import java.util.Scanner;
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public class Main {
@@ -776,13 +778,33 @@ public class Main {
         // System.out.println(Student.numOfStudents);
         // System.out.println(student1.schoolName);
 
-      try(FileWriter file = new FileWriter("test.txt");) {
-          file.write("IS THIS WORKING?");
-          System.out.println("located");
-      } catch (Exception e) {
-        System.out.println(e);
-        // TODO: handle exception
-      }
+    //   try(FileWriter file = new FileWriter("test.txt");) {
+    //       file.write("IS THIS WORKING?");
+    //       System.out.println("located");
+    //   } catch (Exception e) {
+    //     System.out.println(e);
+    //     // TODO: handle exception
+    //   }
+
+    // void timerFunction(){
+    //     Timer timer = new Timer();
+
+    //     TimerTask task = new TimerTask() {
+    //         int count = 0;
+    //         @Override
+    //         public void run() {
+    //             count++;
+    //             System.out.println("Task executed: " + count);
+    //             if (count >= 5) { // stop after 5 executions
+    //                 timer.cancel();
+    //                 System.out.println("Timer stopped.");
+    //             }
+    //         }
+    //     };
+
+    //     // Schedule: delay 1000ms (1s), repeat every 2000ms (2s)
+    //     timer.schedule(task, 1000, 2000);
+    //   }
 
     }
     // -----METHODS-----
